@@ -1,0 +1,141 @@
+@startuml Frogger
+
+title Diagrama de Clases - Frogger (con Interfaz y Memoria)
+
+' Clases principales
+
+class Juego
+
+class Bucle
+
+class Nivel
+
+class Puntaje
+
+class Entrada
+
+class Entidad
+
+class Rana
+
+class Carro
+
+class Camion
+
+class Tronco
+
+class Tortuga
+
+class Cocodrilo
+
+class Mosca
+
+class Meta
+
+class Rio
+
+class Carretera
+
+class Vida
+
+class Colision
+
+class Movimiento
+
+class Renderizador
+
+class Sprite
+
+class Animacion
+
+class Sonido
+
+class Aleatorio
+
+class Temporizador
+
+class Memoria
+
+' Nueva interfaz
+
+interface Interfaz
+
+' Relaciones principales
+
+Juego *-- Bucle
+
+Juego *-- Nivel
+
+Juego *-- Rana
+
+Juego *-- Renderizador
+
+Juego o-- Sonido
+
+Juego o-- Interfaz
+
+Juego o-- Memoria
+
+Bucle o-- Entrada
+
+Bucle o-- Movimiento
+
+Bucle o-- Colision
+
+Bucle o-- Temporizador
+
+Bucle o-- Aleatorio
+
+Nivel *-- Puntaje
+
+Nivel *-- Rio
+
+Nivel *-- Carretera
+
+Nivel *-- Meta
+
+Puntaje *-- Vida
+
+Puntaje o-- Memoria
+
+Rio o-- Tronco
+
+Rio o-- Tortuga
+
+Rio o-- Cocodrilo
+
+Carretera o-- Carro
+
+Carretera o-- Camion
+
+Meta *-- Mosca
+
+' Entidad como clase base (herencia)
+
+Entidad <|-- Rana
+
+Entidad <|-- Carro
+
+Entidad <|-- Camion
+
+Entidad <|-- Tronco
+
+Entidad <|-- Tortuga
+
+Entidad <|-- Cocodrilo
+
+Entidad <|-- Mosca
+
+Entidad <|-- Meta
+
+Entidad <|-- Rio
+
+Entidad <|-- Carretera
+
+' Renderizado
+
+Renderizador *-- Sprite
+
+Renderizador *-- Animacion
+
+@enduml
