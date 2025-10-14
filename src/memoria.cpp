@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -15,8 +15,8 @@ int main(int argc, char const *argv[])
     cout << "double: " << sizeof(double) << endl;
     cout << "byte: " << sizeof(byte) << endl;
     cout << "float: " << sizeof(float) << endl;
-    
-    void* direccion = malloc(4);
+
+    void *direccion = malloc(4);
     cout << "direccion valor: " << direccion << endl;
     cout << "tamaño: " << sizeof(direccion) << endl;
     cout << "direccion puntero: " << &direccion << endl;
